@@ -1,10 +1,10 @@
 var dbConfig =  {
   mongodb: {
     test: {
-      url: "mongodb://localhost/euquerominhabiblioteca_test"
+      url: "mongodb://localhost/nhandereko_test"
     },
     development: {
-      url: "mongodb://localhost/euquerominhabiblioteca_development",
+      url: "mongodb://localhost/nhandereko_dev"
     },
     production: {
       url: process.env.MONGOHQ_URL
@@ -16,6 +16,6 @@ var dbConfig =  {
   getDBURL: function(key) {
     return this.getDB(key)['url']
   }
-}
+};
 
-module.exports = dbConfig
+module.exports = dbConfig;
