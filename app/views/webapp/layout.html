@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nhandereko| {% block title %}{% endblock %} </title>
+        
+        {% block meta %}
+        <!-- Search Engine -->
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Team Nhandereko <team@nhandereko.com>"/>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- FB -->
+        <meta property="og:type" content="social"/>
+        <meta property="og:title" content="Nhandereko"/>
+        <meta property="og:url" content="{{ host }}" />
+        <meta property="og:image" content="{{ host }}/public/assets/fb-share.png"/>
+        <meta property="og:site_name" content="Nhandereko"/>
+        <meta property="og:description" content="Nhandereko" />
+        
+        {% endblock %}
+
+        <link rel="canonical" href="{{ host }}">
+        <link rel="shortcut icon" href="favicon.ico"/>
+        
+        <!-- iOS -->
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js">
+        <![endif]-->
+
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+        {% block head_styles %}
+        {% endblock %}
+
+    </head>
+    <body>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/" target="_blank">atualize seu nevegador</a> para ter uma experiência completa neste site.</p>
+    <![endif]-->
+
+    
+
+    <section class="main-wrapper" id="site_wrapper">
+        <article class="wrapper site-wrapper">
+            {% block yield %} {% endblock %}
+        </article>
+    </section>
+    
+    <footer></footer>
+
+    <script src="assets/scripts/vendor.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script src="assets/scripts/main.js"></script>
+    
+    {% block footer_scripts %} {% endblock %}
+
+    </body>
+</html>
