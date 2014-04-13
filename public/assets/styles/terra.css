@@ -1,0 +1,30 @@
+body {
+    padding: 0 5px 5px 5px;
+}
+
+header {
+  background: #F5F5F5;
+  margin: 0;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 43px;
+  text-shadow: 0 2px white;
+  padding: 30px;
+}
+
+input[type=number] {
+    width: 60px;
+}
+
+.div-reutilizar {
+    max-width: 500px;
+    margin: auto;
+}
+
+.div-re {
+  padding: 20px;
+}
+
+.div-depois {
+    display: none;
+}
