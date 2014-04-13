@@ -8,4 +8,8 @@ module.exports = function(app){
     	res.locals = req.query;
         res.render('webapp/prova/missions')
     });
+
+    app.get('/finish', function(req,res) {
+    	res.render('webapp/finish');
+    })
 };

@@ -290,6 +290,16 @@ header.top-header {
 }
 
 
+.finish .jobs-list {
+	margin-top:60px;
+}
+.finish .wrapper-99-jobs {
+	margin-top:70px;
+}
+.finish ul li.job {
+	margin-right:20px;
+}
+
 @media only screen and (max-width:768px) {
 
 	.sm-text-center {

@@ -1,0 +1,64 @@
+{% extends '../layout.html' %}
+
+{% block title %}Missões{% endblock %}
+
+{% block menu %}
+    {% include '../menu.html' %}
+{% endblock %}
+
+{% block yield %}
+
+<section class="nhandereko container">
+	<header class='main-header'><h2>Nhanderekó</h2></header>
+	<div class="page-header">
+	  <h1>Ei, você já esteve aqui antes! <small>Chegou a hora de rever suas respostas, vamos lá!</small></h1>
+	</div>
+	<div class="user-questions">
+		<fieldset class="question-1 question-field from-group">
+			<label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-2 question-field from-group">
+			<label for="question_question_2" class='control-label'>Consigo equilibrar sonhos + emoções, vontades e ações</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		</fieldset>
+		<fieldset class="question-3 question-field from-group">
+			<label for="question_question_3" class='control-label'>Posso articular redes sociais e mobilizar pessoas para uma causa.</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-4 question-field from-group">
+			<label for="question_question_4" class='control-label'>Tenho capacidade de transformar sonhos em realidade</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-5 question-field from-group">
+			<label for="question_question_5" class='control-label'>Sou uma pessoa criativa</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-6 question-field from-group">
+			<label for="question_question_6" class='control-label'>Procurar inovar nas atitudes</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-7 question-field from-group">
+			<label for="question_question_7" class='control-label'>Tenho meus valores, crenças, mas estou aberto para o desconhecido</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-8 question-field from-group">
+			<label for="question_question_8" class='control-label'>Procuro me comunicar, mesmo não sabendo falar outras línguas</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-9 question-field from-group">
+			<label for="question_question_9" class='control-label'>Estou pronto para agir</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+		<fieldset class="question-10 question-field from-group">
+			<label for="question_question_10" class='control-label'>Quero compartilhar com os outros o que eu aprendi</label>
+			<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
+		</fieldset>
+	</div>
+
+	<div class="form-controls">
+		<a class="btn btn btn-lg btn-primary btn-block" href="/finish" >Finalizar!</a>
+	</div>
+</section>
+{% endblock %}

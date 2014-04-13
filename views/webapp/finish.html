@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}Obrigado!{% endblock %}
+
+{% block menu %}
+        {% include 'menu.html' %}
+{% endblock %}
+
+{% block yield %}
+<header class="top-header text-center">Obrigado!</header><br />
+<section class="container finish">
+	<div class="page-header text-center">
+		<h1>Você finalizou todas as suas missões. <br /><small>Agora é só aguardar nosso contato</small></h1>
+	</div>
+	
+	<article class="wrapper-99-jobs text-center">
+		<header><h3>Olha o que encontramos pra você!</h3></header>
+
+		<p>Enquanto você espera o nosso contato, encontramos empresas que tem tudo a ver com o seu perfil!</p>
+
+		<ul class="list-unstyled inline-list text-center jobs-list">
+			<li class='job'>
+				<div class="avatar-thumb">
+					<a href="https://www.99jobs.com/abril" target="_blank"><img src="/assets/images/jobs/abril.png" alt="Abril" class='img-circle img-responsive'></a>
+				</div>
+			</li>
+			<li class='job'>
+				<div class="avatar-thumb">
+					<a href="https://www.99jobs.com/amil" target="_blank"><img src="/assets/images/jobs/amil.png" alt="Amil" class='img-circle img-responsive'></a>
+				</div>
+			</li>
+			<li class='job'>
+				<div class="avatar-thumb">
+					<a href="https://www.99jobs.com/3m" target="_blank"><img src="/assets/images/jobs/3m.png" alt="3M" class='img-circle img-responsive'></a>
+				</div>
+			</li>
+			<li class='job'>
+				<div class="avatar-thumb">
+					<a href="https://www.99jobs.com/ale" target="_blank"><img src="/assets/images/jobs/ale.png" alt="99jobs" class='img-circle img-responsive'></a>
+				</div>
+			</li>
+		</ul>
+	</article>
+</section>
+{% endblock %}
