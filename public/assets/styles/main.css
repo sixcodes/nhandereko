@@ -186,9 +186,34 @@ fieldset {
 	
 }
 
+
+.users-list .user-profile-info  {
+	margin-top:15px;
+}
+
 .badges .user-badge .badge-img {
 	width: 64px;
 	height: 64px;
+}
+.users-list.inline-list li {
+	margin-right: 0;
+	margin-bottom:30px;
+}
+
+.avatar-thumb {
+	width:148px;
+	height:148px;
+	margin: 0 auto;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+	cursor:pointer;
+}
+
+
+.users-list {
+	margin-top:70px;
 }
 
 .inline-list {}
@@ -264,6 +289,7 @@ header.top-header {
 	overflow: hidden;
 	margin-bottom: 30px;
 }
+
 
 @media only screen and (max-width:768px) {
 
