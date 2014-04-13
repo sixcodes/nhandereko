@@ -18,3 +18,11 @@ header {
   opacity: 0.5;
   margin-bottom: 10px;
 }
+
+.muted {
+  color: #CAC19B;
+}
+
+.pagination {
+  margin-top: 35px;
+}
