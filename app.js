@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 
-swig.setDefaults({cache: false})
+swig.setDefaults({cache: false});
 
 app.set('layout', 'webapp/layout');
 
