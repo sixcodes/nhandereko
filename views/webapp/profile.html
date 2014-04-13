@@ -1,26 +1,27 @@
 {% extends 'layout.html' %}
 
-{% block title %}Perfil de João Ribeiro{% endblock %}
+{% block title %}Perfil de Camila Kamilo{% endblock %}
 
 {% block menu %}
     {% include 'menu.html' %}
 {% endblock %}
 
 {% block yield %}
-<header class="top-header text-center">Perfil de João Ribeiro</header>
+<header class="top-header text-center">Perfil de Camila Kamilo</header>
 <section class="container login-wrapper">
 	<div class="row voffset5">
 		<div class="col-md-12 col-sm-12 clearfix sm-text-center">
-			<div class="col-md-3 col-sm-6">
+			<div class="col-md-3 col-sm-6 text-center">
 				<div class="profile-img">
-					<img src="/assets/images/profile.png" class="img-circle img-responsive" alt="140x140" src="">
+					<img src="/assets/images/profile-1.png" class="img-circle img-responsive" alt="140x140" src="">
 				</div>
-				<p class='profile-name'>João Ribeiro</p>
+				<p class='profile-name'>Camila Kamilo</p>
+				<a href="/missions/?completed=3" class="btn btn-lg btn-primary">[+] adicionar amigo</a>
 			</div>
 			<div class="col-md-9 col-sm-6">
 				<div class="profile-info clearfix">
 					<div class="col-md-4 text-left sm-text-center col-md-offset-1">
-						<p><i class="fa fa-user"></i> João Ribeiro</p>
+						<p><i class="fa fa-user"></i> Camila Kamilo</p>
 						<p><i class="fa fa-map-marker"></i> São Paulo, Brasil</p>
 						<p><i class="fa fa-facebook-square"></i> Facebook</p>
 					</div>
@@ -29,8 +30,6 @@
 							<h2 style='margin:0;'>Troféus</h2><br />
 							<ul class="list-unstyled inline-list">
 								<li class="user-badge"><div class="badge-img"><img src="/assets/images/trofeus/trofeu.agua.png" class='img-responsive img-circle'></div></li>
-								<li class="user-badge"><div class="badge-img"><img src="/assets/images/trofeus/trofeu.ar.png" class='img-responsive img-circle'></div></li>
-								<li class="user-badge"><div class="badge-img"><img src="/assets/images/trofeus/trofeu.terra.png" class='img-responsive img-circle'></div></li>
 								<li class="user-badge"><div class="badge-img"><img src="/assets/images/trofeus/trofeu.fogo.cinza.png" class='img-responsive img-circle'></div></li>
 							</ul>
 						</div>
@@ -58,40 +57,46 @@
 					<span class="title"><strong>Água</strong></span><span class="status"><span class="label label-primary">concluido</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
 				</li>
 				<li class="air">
-					<span class="title"><strong>Ar</strong></span><span class="status"><span class="label label-success">em andamento</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
+					<span class="title"><strong>Ar</strong></span><span class="status"><span class="label label-primary">concluido</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
 				</li>
 				<li class="earth">
-					<span class="title"><strong>Terra</strong></span><span class="status"><span class="label label-info">aguardando</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
+					<span class="title"><strong>Terra</strong></span><span class="status"><span class="label label-primary">concluido</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
 				</li>
 				<li class="fire">
-					<span class="title"><strong>Fogo</strong></span><span class="status"><span class="label label-default">proximo</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
+					<span class="title"><strong>Fogo</strong></span><span class="status"><span class="label label-success">executando</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
 				</li>
 				<li class="fire">
-					<span class="title"><strong>Nhandereko</strong></span><span class="status"><span class="label label-warning">Ocioso</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
+					<span class="title"><strong>Nhandereko</strong></span><span class="status"><span class="label label-warning">próximo</span></span> - <span> <i class="fa fa-camera"></i> galeria</span>
 				</li>
 			</ul>
 		</div>
 		<div class="col-md-6">
 			<h4>Comentários <i class="fa fa-comments"></i></h4><br />
-			<ul class="comments-list list-unstyled">
-				<li class="comment clearfix">
-					<span class="thumb pull-left col-md-5"> <img src="/assets/images/profile-1.png" class='img-circle  img-responsive'></span>
-					<span class="message col-md-6">Parabéns por completar a missão da água! Quais foram as suas principais dificuldades?</span>		
-				</li>
+			<ul class="comments-list list-unstyled" id="comments_wrapper">
 				<li class="comment clearfix">
 					<span class="thumb pull-left col-md-5"> <img src="/assets/images/profile.png" class='img-circle  img-responsive'></span>
-					<span class="message col-md-6">Me matriculei em aulas de teatro e o mais difícil para mim foi falar em público. Graças ao aplicativo, consegui melhorar minha dicção e oratória.</span>		
+					<span class="message col-md-6">Olá, tudo certo? Vi que você está bem evoluida nas missões! Parabéns, espero conseguir completar todas até chegar a Nhandereko também.</span>		
 				</li>
-				<li class="comment new-comment">
-					<div class="form-group">
-						<textarea class="form-control"></textarea>
-					</div>
-					<div class="form-group">
-						<button type="button" class="btn btn-primary btn-sm">Comentar</button>
-					</div>
+				<li class="comment clearfix">
+					<span class="thumb pull-left col-md-5"> <img src="/assets/images/profile-1.png" class='img-circle  img-responsive'></span>
+					<span class="message col-md-6">Olá, me dediquei bastante, estou gostando bastante. Continue na batalha, boa sorte!</span>		
 				</li>
 			</ul>
+			<div class="comment new-comment">
+				<div class="form-group">
+					<textarea class="form-control" id="new_comment_content"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary btn-sm" id="new_comment" data-target="#comments_wrapper" data-value="#new_comment_content">Comentar</button>
+				</div>
+			</div>
 		</div>
 	</div>
+	<script type="text/template" id="new_comment_template">
+		<li class="comment clearfix">
+			<span class="thumb pull-left col-md-5"> <img src="/assets/images/profile.png" class='img-circle  img-responsive'></span>
+			<span class="message col-md-6 comment_body"></span>
+		</li>
+	</script>
 </section>
 {% endblock %}

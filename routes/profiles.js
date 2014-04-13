@@ -1,5 +1,9 @@
 module.exports = function(app){
-    app.get('/profile/:username', function(req,res) {
+    app.get('/me', function(req,res) {
+    	res.render('webapp/me');
+    });
+
+    app.get('/profile/:profile', function(req,res) {
     	res.render('webapp/profile');
     });
 

@@ -27,6 +27,39 @@ var nhanderekoApp;
 				return $.grep(allValid, function(item) { return (item == false);}).length == 0
 			}
 
+
+			$("#new_comment").on('click', function(ev) {
+				ev.preventDefault();
+
+				var t = $(this),
+					target = $(t.data('target')),
+					comment  = $(t.data('value')),
+					value    = comment.val();
+
+
+				if(target) {
+					var comment_template = $($("#new_comment_template").html());
+					comment_template.find('.comment_body').html(value);
+					comment_template.hide();
+					target.append(comment_template);
+					comment.val('');
+					comment_template.fadeIn('slow');
+
+					setTimeout(function() { document.location = '/missions/?completed=3'; }, 1000);
+				}
+			})
+
+			$("[data-spinner]").on('click', function(ev) {
+				ev.preventDefault();
+				var t = $(this);
+
+				t.find('.fa').addClass('fa-spin');
+
+				setTimeout(function() {
+					document.location = t.attr('href');
+				}, 1950)
+			})
+
 			function observeForm(form) {
 				$(form).on('change', function() {
 

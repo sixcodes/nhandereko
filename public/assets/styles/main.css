@@ -133,7 +133,6 @@ fieldset {
 .profile-name {
 	margin-top:10px;
 	font-size:30px;
-	padding-left: 40px;
 }
 
 .missions-list {
@@ -188,7 +187,7 @@ fieldset {
 
 
 .users-list .user-profile-info  {
-	margin-top:15px;
+	margin-top::;5px;
 }
 
 .badges .user-badge .badge-img {
