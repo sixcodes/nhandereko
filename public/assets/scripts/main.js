@@ -45,7 +45,7 @@ var nhanderekoApp;
 					comment.val('');
 					comment_template.fadeIn('slow');
 
-					setTimeout(function() { document.location = '/missions/?completed=3'; }, 1000);
+					setTimeout(function() { document.location = '/missions/?completed=4'; }, 1000);
 				}
 			})
 

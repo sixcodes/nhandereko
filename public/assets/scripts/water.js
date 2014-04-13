@@ -21,7 +21,7 @@ $(document).ready(function() {
 				next.fadeIn();
 			})
 		} else {
-			setTimeout(function() { document.location = '/missions/?completed=1' }, 1000);
+			setTimeout(function() { document.location = '/missions/?completed=2' }, 1000);
 		}
 
 	})

@@ -48,6 +48,11 @@
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
 
+.visible {
+	display: block !important;
+	visibility: visible !important;
+	opacity:1 !important;
+}
 
 body, html {
   margin:0;

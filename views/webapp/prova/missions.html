@@ -7,9 +7,10 @@
 {% endblock %}
 
 {% block yield %}
+<header class="top-header text-center">Suas missões</header><br />
 <div class="container">
     <div class="row missions-list-square">
-        <div class="col-sm-6 col-md-3 mission {% if !completed %} current {% endif %}">
+        <div class="col-sm-6 col-md-3 mission {% if !completed || completed == 1 %} current {% endif %}">
             <div class="thumbnail">
                 <img data-src="holder.js/300x200" alt="Water" src="/assets/images/missions/water.png" style="width: 150px; height: 100px;">
                 <div class="caption">
@@ -17,17 +18,15 @@
                     <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p align="center" class='mg-10'><a href="/mission/water" class="btn btn-primary" role="button">Começar</a> <a href="#" data-toggle="modal" data-target="js_modal_status" class="btn btn-default js_modal_status" role="button">Status</a></p>
                 </div>
-                {% if !completed %}
                     <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: {% if completed > 1 %} 100% {% else %} 10% {% endif %}">
                             <span class="sr-only">100%</span>
                         </div>
                     </div>
-                {% endif %}
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 mission {% if completed %} current {% endif %}">
+        <div class="col-sm-6 col-md-3 mission {% if completed == 2 %} current {% endif %}">
             <div class="thumbnail">
                 <img data-src="holder.js/300x200" alt="Wind" src="/assets/images/missions/wind.png" style="width: 150px; height: 100px;">
                 <div class="caption">
@@ -37,7 +36,7 @@
                 </div>
                 {% if completed %}
                     <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="10" style="width: 10%">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="10" style="width: {% if completed > 2 %} 100% {% else %} 0% {% endif %}">
                             <span class="sr-only">10%</span>
                         </div>
                     </div>
@@ -45,29 +44,43 @@
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 mission">
+        <div class="col-sm-6 col-md-3 mission {% if completed == 3 %} current {% endif %}">
             <div class="thumbnail">
                 <img data-src="holder.js/300x200" alt="Wind" src="/assets/images/missions/earth.png" style="width: 150px; height: 100px;">
                 <div class="caption">
                     <h3>Prova do terra</h3>
                     <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p align="center" class='mg-10'><a href="/mission/earth" class="btn btn-primary" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                    {% if completed %}
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="10" style="width: {% if completed > 3 %} 100% {% else %} 0% {% endif %}">
+                                <span class="sr-only">10%</span>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 mission">
+        <div class="col-sm-6 col-md-3 mission {% if completed == 4 %} current {% endif %}">
             <div class="thumbnail">
                 <img data-src="holder.js/300x200" alt="Fire" src="/assets/images/missions/fire.png" style="width: 100px; height: 100px;">
                 <div class="caption">
                     <h3>Prova do fogo</h3>
                     <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p align="center" class='mg-10'><a href="/mission/fire/" class="btn btn-primary btn-" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                    {% if completed %}
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="10" style="width: {% if completed > 4 %} 100% {% else %} 0% {% endif %}">
+                                <span class="sr-only">10%</span>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-12 mission text-center current">
+        <div class="col-sm-12 col-md-12 mission text-center hidden {% if completed >= 5 %} visible {% endif %}">
             <div class="thumbnail">
                 <img data-src="holder.js/300x200" alt="Fire" src="/assets/images/missions/fire.png" style="width: 100px; height: 100px;display: inline-block;">
                 <img data-src="holder.js/300x200" alt="Fire" src="/assets/images/missions/wind.png" style="width: 100px; height: 100px;display: inline-block;">
@@ -77,6 +90,13 @@
                     <h3>Nhanderekó</h3>
                     <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p align="center" class='mg-10'><a href="/mission/nhandereko/" class="btn btn-primary btn-" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                    {% if completed %}
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="10" style="width: {% if completed > 5 %} 100% {% else %} 0% {% endif %}">
+                                <span class="sr-only">10%</span>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
