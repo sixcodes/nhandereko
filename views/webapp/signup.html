@@ -15,6 +15,9 @@
 			<input type="hidden" name="user[can_improve]">
 			
 			<section class="step step-1" id="signup_step_1">
+				<div class="page-header">
+				  <h1><small>Vamos lá, conte nos um pouco sobre você!</small></h1>
+				</div>
 				<fieldset class="user-avatar form-group">
 					<input type="file" class='form-control' id="user_avatar" name="user[avatar]">
 				</fieldset>
@@ -38,10 +41,15 @@
 				<fieldset class="user-question form-group">
 					<textarea name="user[question]" id="user_question" placeholder="Porque você quer jogar?" class='form-control'></textarea>	
 				</fieldset>
+				<div class="form-controls">
+					<button class="data-step-button btn btn-lg btn-success" id="step_1_button" data-step='2' class='btn btn-lg btn-primary btn-block' disabled>Próximo >></button>
+				</div>
 			</section>
 			<section class="step step-2" id="signup_step_2">
-				<header class='main-header'><h2>Questionário</h2></header>
-
+				<header class='main-header'><h2>Aquecimento</h2></header>
+				<div class="page-header">
+				  <h1><small>Complete cada pergunta de acordo com suas qualidades!</small></h1>
+				</div>
 				<div class="user-questions">
 					<fieldset class="question-1 question-field from-group">
 						<label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
@@ -85,10 +93,21 @@
 						<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
 					</fieldset>
 				</div>
+
+				<div class="form-controls">
+					<button class="data-step-button btn btn-lg btn-success" id="step_2_button" data-step='3' class='btn btn-lg btn-primary btn-block'>Próximo >></button>
+				</div>
 			</section>
-			<div class="form-controls">
-				<button class="data-step-button btn btn-lg btn-success" id="step_1_button" data-step='2' class='btn btn-lg btn-primary btn-block' disabled>Próximo >></button>
-			</div>
+			<section class="step step-3" id="signup_step_3">
+				<header class='main-header'><h2>Quase lá...</h2></header>
+				<div class="page-header">
+				  <h1><small>Agora, selecione <strong>3</strong> itens que você acredita que pode melhorar.</small></h1>
+				</div>
+				<div class="questions-step"></div>
+				<div class="form-controls">
+					<button class="data-step-button btn btn-lg btn-success" id="step_1_button" data-step='4' class='btn btn-lg btn-primary btn-block'>Próximo >></button>
+				</div>
+			</section>
 		</form>
 	</div>
 </section>

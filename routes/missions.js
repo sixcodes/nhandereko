@@ -1,13 +1,11 @@
 module.exports = function(app){
-    app.get('/mission/fire', function(req,res) {
-        res.render('webapp/prova/fogo')
-    });
 
-    app.get('/mission/earth', function(req, res){
-        res.render('webapp/prova/terra')
-    });
-
+	app.get('/mission/:mission', function(req,res) {
+		res.render('webapp/prova/' + req.params.mission )
+	})
+	
     app.get('/missions/', function(req, res){
+    	res.locals = req.query;
         res.render('webapp/prova/missions')
     });
 };

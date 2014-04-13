@@ -1,0 +1,111 @@
+{% extends '../layout.html' %}
+
+{% block title %}Prova de Fogo{% endblock %}
+
+{% block head_styles %}
+<link rel="stylesheet" type="text/css" href="/assets/styles/fire.css">
+{% endblock %}
+
+{% block menu %}
+    {% include '../menu.html' %}
+{% endblock %}
+
+{% block yield %}
+<header>
+    <h1 class="text-center">Prova da Agua</h1>
+</header>
+
+<div class="container">
+    <div class="page-header">
+        <h1><small>Você marcou algumas habilidades que precisam ser melhoradas, justifique os motivos.</small></h1>
+    </div>
+    <div class="user-questions water">
+        <div class="question-1 question-field from-group">
+            <label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
+            <hr>
+            <p>
+                <strong>Conte nos como você conclui essa tarefa: </strong>
+                <textarea name="questions[]" class='form-control col-md-10' placeholder='Justifique porque você acredita que precisa melhorar essa habilidade.'></textarea>
+            </p>
+            <br />
+            <p>
+                <strong>Anexe uma imagem da conclusão da tarefa:</strong><input type="file" name="questions[][photo]" class='mission_picture'></span>
+            </p>
+            <br />
+            <p>
+                <strong>Quantas pessoas você impactou?</strong>
+                <input type="text" name="questions[][people_impacted]" class='form-control'>
+            </p><br
+            <p>
+                <strong>Qual foi o principal eixo de impacto?</strong>
+                <select name="questions[][impact_area]" id="" class='form-control'>
+                    <option value="">Selecione</option>
+                    <option value="1">Sócio-Econômico</option>
+                    <option value="2">Sócio-Cultural</option>
+                    <option value="3">Sócio-Ambiental</option>
+                </select>
+            </p>
+        </div>
+        <div class="question-2 question-field from-group">
+            <label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
+            <hr>
+            <p>
+                <strong>Conte nos como você conclui essa tarefa: </strong>
+                <textarea name="questions[]" class='form-control col-md-10' placeholder='Justifique porque você acredita que precisa melhorar essa habilidade.'></textarea>
+            </p>
+            <br />
+            <p>
+                <strong>Anexe uma imagem da conclusão da tarefa:</strong><input type="file" name="questions[][photo]" class='mission_picture'></span>
+            </p>
+            <br />
+            <p>
+                <strong>Quantas pessoas você impactou?</strong>
+                <input type="text" name="questions[][people_impacted]" class='form-control'>
+            </p><br
+            <p>
+                <strong>Qual foi o principal eixo de impacto?</strong>
+                <select name="questions[][impact_area]" id="" class='form-control'>
+                    <option value="">Selecione</option>
+                    <option value="1">Sócio-Econômico</option>
+                    <option value="2">Sócio-Cultural</option>
+                    <option value="3">Sócio-Ambiental</option>
+                </select>
+            </p>
+        </div>
+        <div class="question-3 question-field from-group">
+            <label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
+            <hr>
+            <p>
+                <strong>Conte nos como você conclui essa tarefa: </strong>
+                <textarea name="questions[]" class='form-control col-md-10' placeholder='Justifique porque você acredita que precisa melhorar essa habilidade.'></textarea>
+            </p>
+            <br />
+            <p>
+                <strong>Anexe uma imagem da conclusão da tarefa:</strong><input type="file" name="questions[][photo]" class='mission_picture'></span>
+            </p>
+            <br />
+            <p>
+                <strong>Quantas pessoas você impactou?</strong>
+                <input type="text" name="questions[][people_impacted]" class='form-control'>
+            </p><br
+            <p>
+                <strong>Qual foi o principal eixo de impacto?</strong>
+                <select name="questions[][impact_area]" id="" class='form-control'>
+                    <option value="">Selecione</option>
+                    <option value="1">Sócio-Econômico</option>
+                    <option value="2">Sócio-Cultural</option>
+                    <option value="3">Sócio-Ambiental</option>
+                </select>
+            </p>
+        </div>
+    </div>
+    <div class="form-controls">
+        <button class="btn btn-lg btn-success btn-block" id="next-question">Próximo >></button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer_scripts %}
+<script type="text/javascript" src="/assets/scripts/water.js"></script>
+{% endblock %}

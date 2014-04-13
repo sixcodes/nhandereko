@@ -197,6 +197,13 @@ fieldset {
 	margin-right: 10px;
 }
 
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+	background-image: none;
+	background: #ECECEC;
+}
+
 header.top-header {
 	background: #F5F5F5;
 	margin: 0;
@@ -205,6 +212,57 @@ header.top-header {
 	font-size: 43px;
 	text-shadow: 0 2px white;
 	padding: 30px;
+}
+
+.missions-list-square {
+	margin-top:100px;
+}
+
+.missions-list-square .mission {
+	opacity: 0.5;
+}
+.missions-list-square .mission.current {
+ opacity:1;
+}
+
+.missions-list-square .mission .thumbnail > img {
+	margin-top:10px;
+}
+.missions-list-square .mission .thumbnail {
+	padding:10px;
+	height:330px;
+}
+
+.mg-10 {
+	margin-top:15px;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #747474;
+}
+
+.water .question-field {
+	position:relative;
+	display: none;
+}
+
+.water .question-field.question-1 {
+	display: block;
+}
+
+.water .question-field textarea {
+	margin-top:20px;
+	margin-bottom:20px;
+	height:90px;
+}
+
+.water .question-field label {
+	font-size:17px;
+}
+
+.user-questions.water {
+	overflow: hidden;
+	margin-bottom: 30px;
 }
 
 @media only screen and (max-width:768px) {
