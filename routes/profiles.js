@@ -3,4 +3,8 @@ module.exports = function(app){
     	res.render('webapp/profile');
     })
 
+    app.get('/signup', function(req,res) {
+    	res.render('webapp/signup');
+    })
+
 };

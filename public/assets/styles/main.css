@@ -54,6 +54,18 @@ body, html {
   padding:0;
 }
 
+
+#home {
+	width: 100%;
+	height:100%;
+	background: url(../images/background-2.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: absolute;;
+	top:0;
+	left:0;
+}
+
 fieldset {
   border:0;
 }
@@ -62,6 +74,10 @@ fieldset {
 	margin-bottom:20px;
 }
 
+.login-wrapper {
+	position: relative;;
+	top:45%;
+}
 
 .login-type-select {
   text-align:center;
@@ -71,9 +87,6 @@ fieldset {
   margin-right: 20px;
 }
 
-.login-email-wrapper {
-  display: none;
-}
 
 .login-email-wrapper .step {
 	display: none;
@@ -148,6 +161,10 @@ fieldset {
 	padding-bottom: 15px;
 }
 
+.comments-list .comment.new-comment {
+	border-bottom: 0;
+}
+
 .comments-list .comment .comment {
 	padding-left:30px;
 }
@@ -180,6 +197,16 @@ fieldset {
 	margin-right: 10px;
 }
 
+header.top-header {
+	background: #F5F5F5;
+	margin: 0;
+	color: #aaa;
+	font-weight: bold;
+	font-size: 43px;
+	text-shadow: 0 2px white;
+	padding: 30px;
+}
+
 @media only screen and (max-width:768px) {
 
 	.sm-text-center {
@@ -197,5 +224,11 @@ fieldset {
 	.profile-img {
 		margin: 0 auto;
 	}
+	#home {
+		background-image: url(../images/background-mobile.jpg);
+	}
 }
 
+#site_wrapper {
+	margin-bottom: 50px;
+}
