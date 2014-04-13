@@ -2,7 +2,7 @@ module.exports = function(app){
     var modelUser = app.models.users;
 
     return UserController = {
-        create: function(req, res){
+        createUser: function(req, res){
             var newUser = modelUser({
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
