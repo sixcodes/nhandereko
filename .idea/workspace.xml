@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03b2bbc4-d676-4238-86fb-d43eec8e7899" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/webapp/prova/fogo.html" afterPath="$PROJECT_DIR$/views/webapp/prova/fogo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/webapp/layout.html" afterPath="$PROJECT_DIR$/views/webapp/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/missions.js" afterPath="$PROJECT_DIR$/routes/missions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/webapp/profile.html" afterPath="$PROJECT_DIR$/views/webapp/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/profiles.js" afterPath="$PROJECT_DIR$/routes/profiles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/webapp/signup.html" afterPath="$PROJECT_DIR$/views/webapp/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/webapp/prova/terra.html" afterPath="$PROJECT_DIR$/views/webapp/prova/terra.html" />
-    </list>
+    <list default="true" id="03b2bbc4-d676-4238-86fb-d43eec8e7899" name="Default" comment="" />
     <ignored path="nhandereko.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,10 +104,11 @@
       <file leaf-file-name="missions.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/webapp/prova/missions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6706081" vertical-offset="403" max-vertical-offset="1008">
-              <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.21621622" vertical-offset="144" max-vertical-offset="1296">
+              <caret line="17" column="160" selection-start-line="17" selection-start-column="160" selection-end-line="17" selection-end-column="160" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -741,10 +733,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/webapp/prova/missions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6706081" vertical-offset="403" max-vertical-offset="1008">
-          <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.21621622" vertical-offset="144" max-vertical-offset="1296">
+          <caret line="17" column="160" selection-start-line="17" selection-start-column="160" selection-end-line="17" selection-end-column="160" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />

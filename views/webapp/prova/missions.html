@@ -1,0 +1,76 @@
+{% extends '../layout.html' %}
+
+{% block title %}Missões{% endblock %}
+
+{% block menu %}
+    {% include '../menu.html' %}
+{% endblock %}
+
+{% block yield %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="Water" src="/assets/images/missions/water.png" style="width: 150px; height: 100px;">
+                <div class="caption">
+                    <h3>Prova da água</h3>
+                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">Começar</a> <a href="#" data-toggle="modal" data-target="js_modal_status" class="btn btn-default js_modal_status" role="button">Status</a></p>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="Wind" src="/assets/images/missions/wind.png" style="width: 150px; height: 100px;">
+                <div class="caption">
+                    <h3>Prova do ar</h3>
+                    <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p align="center" ><a href="#" class="btn btn-primary" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="Wind" src="/assets/images/missions/earth.png" style="width: 150px; height: 100px;">
+                <div class="caption">
+                    <h3>Prova do terra</h3>
+                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="Fire" src="/assets/images/missions/fire.png" style="width: 100px; height: 100px;">
+                <div class="caption">
+                    <h3>Prova do fogo</h3>
+                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p align="center"><a href="#" class="btn btn-primary btn-" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!--Modal-->
+    <div class="modal fade js_modal_status" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+<script type="application/javascript">
+    $('.js_modal_status').modal();
+</script>
+{% endblock %}
