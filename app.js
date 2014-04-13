@@ -1,33 +1,44 @@
-(function() {
-  "use strict";
 
-  var express   = require('express'),
-    mongoose    = require('mongoose'),
-    path        = require('path');
-    
-  global.app = express();
+var express = require('express')
+    , load = require('express-load')
+    , http = require('http')
+    , path = require('path')
+    , swig = require('swig');
 
-  express.application = app; /* hack for express-namespace */
-  require('express-namespace');
+var io = require('socket.io');
+var app = express();
 
-  app.rootDir    = __dirname
-  app.rootAppDir = __dirname + '/app/';
-  app.modelsPath = path.join(app.rootAppDir , 'models');
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/views');
+app.set("smtp_user", process.env.SMTP_USER);
+app.set("smtp_pass", process.env.SMTP_PASS);
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.cookieParser('your secret here'));
+app.use(express.session());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
 
-  var routes     = require('./config/routes');
-  var config     = require('./config')
+app.set('layout', 'webapp/layout');
 
-  config.setup(app, express);
-  config.setupDatabase(mongoose);
+load('models').then('controllers').then('routes').into(app);
 
-  routes.setup(app);
+if ('development' == app.get('env')) {
+    app.use(express.errorHandler());
+}
+var server = http.createServer(app);
 
-  var port = process.env.PORT || 3000;
+server.listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+});
+var server_io = io.listen(server);
+server_io.sockets.on('status', function (socket) {
 
-  app.listen(port);
-
-  console.log('Express server listening on port =' + port);
-
-  module.exports = exports = app;
-
-})();
+});
+module.exports = server_io;
+module.exports = app;
