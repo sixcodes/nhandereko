@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Nhandereko| {% block title %}{% endblock %} </title>
-        
+
         {% block meta %}
         <!-- Search Engine -->
         <meta name="description" content="">
@@ -21,18 +21,18 @@
         <meta property="og:image" content="{{ host }}/public/assets/fb-share.png"/>
         <meta property="og:site_name" content="Nhandereko"/>
         <meta property="og:description" content="Nhandereko" />
-        
+
         {% endblock %}
 
         <link rel="canonical" href="{{ host }}">
         <link rel="shortcut icon" href="favicon.ico"/>
-        
+
         <!-- iOS -->
         <link rel="apple-touch-icon" href="touch-icon-iphone.png">
         <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
         <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
         <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
-        
+
         <!--[if lt IE 9]>
           <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
           <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js">
@@ -51,14 +51,14 @@
         <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/" target="_blank">atualize seu nevegador</a> para ter uma experiência completa neste site.</p>
     <![endif]-->
 
-    
+
 
     <section class="main-wrapper" id="site_wrapper">
         <article class="wrapper site-wrapper">
             {% block yield %} {% endblock %}
         </article>
     </section>
-    
+
     <footer></footer>
 
     <script src="/assets/scripts/vendor.js"></script>
@@ -74,8 +74,8 @@
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <script src="assets/scripts/main.js"></script>
-    
+    <script src="/assets/scripts/main.js"></script>
+
     {% block footer_scripts %} {% endblock %}
 
     </body>

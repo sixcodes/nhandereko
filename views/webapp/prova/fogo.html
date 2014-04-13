@@ -1,0 +1,83 @@
+{% extends '../layout.html' %}
+
+{% block title %}Prova de Fogo{% endblock %}
+
+{% block head_styles %}
+<link rel="stylesheet" type="text/css" href="/assets/styles/fire.css">
+{% endblock %}
+
+{% block yield %}
+
+<header>
+    <h1 class="text-center">Prova de Fogo</h1>
+</header>
+
+<div class="container">
+    <h2>1. Qual será seu local de trabalho?</h2>
+    <blockquote>
+        Compartilhe com a gente onde você vai fazer uma grande mudança!
+    </blockquote>
+</div>
+<div id="map"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <input type="text" class="form-control map-input" placeholder="Localizacao">
+        </div>
+        <div class="col-md-3">
+            <button class="btn-map-select btn btn-primary">Selecionar no Mapa</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>2. PDCA?</h2>
+    <blockquote>
+        Descreva rapidamente como será o seu projeto
+    </blockquote>
+
+    <div class="row">
+        <div class="col-md-9">
+            <textarea class="form-control" rows="3" placeholder="Um pouco hdasuhsaduh dshauh "></textarea>
+        </div>
+        <div class="col-md-3">
+            <p class="muted">Nós valorizamos muito o conteúdo colocado pelos participantes. Seria genial se entrasse com fotos, vídeos e tudo mais que teve de legal!</p>
+        </div>
+    </div>
+
+    <p class="lead">Fotos Legais!</p>
+    <label>Coloque umas fotos e vídeos bem bacanas que descrevam sua experiência!</label>
+    <input type="file">
+
+</div>
+
+<div class="container">
+    <h2>3. Desenvolvimento</h2>
+    <blockquote>
+        Como foi a execução?
+    </blockquote>
+
+    <div class="row">
+        <div class="col-md-9">
+            <textarea class="form-control" rows="3" placeholder="Um pouco hdasuhsaduh dshauh "></textarea>
+        </div>
+        <div class="col-md-3">
+            <p class="muted">Execução é uma das principais métricas para indicar sua força de vontade ... Diga mais .... </p>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <button class="btn btn-default pagination">Próximo</button>
+        <button class="btn btn-default pagination">Anterior</button>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer_scripts %}
+<script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?&sensor=true"></script>
+<script type="text/javascript" src="/assets/scripts/fire.js"></script>
+{% endblock %}
