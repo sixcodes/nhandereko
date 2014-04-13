@@ -101,4 +101,101 @@ fieldset {
 
 .question-field.selected {
 	background: rgba(224, 224, 224, 0.74);
+	border-radius: 10px;
 }
+
+.profile-info {
+	padding-top: 60px;
+	font-size: 18px;
+}
+.profile-img {
+	max-width: 250px;
+	max-height:250px;
+}
+
+.profile-info p > .fa, .profile-info p .glyphicon {
+	margin-right: 20px;
+}
+
+.profile-name {
+	margin-top:10px;
+	font-size:30px;
+	padding-left: 40px;
+}
+
+.missions-list {
+ margin-bottom:50px;
+}
+
+.missions-list li {
+	margin-bottom: 20px;
+}
+
+.missions-list li .title {
+	width:20%;
+	display: inline-block;;
+}
+
+.missions-list li .status {
+	width:100px;
+	display: inline-block;;
+}
+
+.comments-list {}
+.comments-list .comment {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #F1F1F1;
+	padding-bottom: 15px;
+}
+
+.comments-list .comment .comment {
+	padding-left:30px;
+}
+
+.comments-list .comment .thumb {
+	width:98px;
+	height:98px;
+	display: inline-block;
+	padding-left:0;
+}
+
+.comments-list .comment .message {
+
+}
+.badges  {
+	margin-top:20px;
+}
+.badges .user-badge {
+	
+}
+
+.badges .user-badge .badge-img {
+	width: 64px;
+	height: 64px;
+}
+
+.inline-list {}
+.inline-list li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+@media only screen and (max-width:768px) {
+
+	.sm-text-center {
+		text-align: center;
+	}
+
+	.missions-list li .title {
+		width:30%;
+	}
+
+	.profile-name {
+		text-align: center;
+		padding-left: 0;
+	}
+	.profile-img {
+		margin: 0 auto;
+	}
+}
+

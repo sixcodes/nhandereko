@@ -1,2 +1,1 @@
 web: nodemon app.js -p $PORT
-mongo: mongod

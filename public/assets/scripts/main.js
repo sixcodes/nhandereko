@@ -47,18 +47,17 @@ var nhanderekoApp;
 					target = $('.step-' + step),
 					self_target = $('.step-' + currentStep);
 
-				canContinue = validForm(form);
-
+				canContinue = validForm(form);	
 
 				if(!canContinue || lastStep === currentStep) {
 					return false;
 				}
 
+				// sorry :/
 				if((currentStep + 1) == 3) {
 					$(".signup_form .slider").addClass('disabled')
 					$(".question-field").on('click', function(ev) {
 						var can_select = $(".question-field.selected").size() >= 3
-
 						$(this).toggleClass('selected');
 					})
 				}
