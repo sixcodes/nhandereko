@@ -2,63 +2,84 @@
 
 {% block title %}Prova de Fogo{% endblock %}
 
+{% block head_styles %}
+<link rel="stylesheet" type="text/css" href="/assets/styles/fire.css">
+{% endblock %}
+
 {% block yield %}
 
+<header>
+    <h1 class="text-center">Prova de Fogo</h1>
+</header>
+
+<div class="container">
+    <h2>1. Qual será seu local de trabalho?</h2>
+    <blockquote>
+        Compartilhe com a gente onde você vai fazer uma grande mudança!
+    </blockquote>
+</div>
 <div id="map"></div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <input type="text" class="form-control map-input" placeholder="Localizacao">
+        </div>
+        <div class="col-md-3">
+            <button class="btn-map-select btn btn-primary">Selecionar no Mapa</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>2. PDCA?</h2>
+    <blockquote>
+        Descreva rapidamente como será o seu projeto
+    </blockquote>
+
+    <div class="row">
+        <div class="col-md-9">
+            <textarea class="form-control" rows="3" placeholder="Um pouco hdasuhsaduh dshauh "></textarea>
+        </div>
+        <div class="col-md-3">
+            <p class="muted">Nós valorizamos muito o conteúdo colocado pelos participantes. Seria genial se entrasse com fotos, vídeos e tudo mais que teve de legal!</p>
+        </div>
+    </div>
+
+    <p class="lead">Fotos Legais!</p>
+    <label>Coloque umas fotos e vídeos bem bacanas que descrevam sua experiência!</label>
+    <input type="file">
+
+</div>
+
+<div class="container">
+    <h2>3. Desenvolvimento</h2>
+    <blockquote>
+        Como foi a execução?
+    </blockquote>
+
+    <div class="row">
+        <div class="col-md-9">
+            <textarea class="form-control" rows="3" placeholder="Um pouco hdasuhsaduh dshauh "></textarea>
+        </div>
+        <div class="col-md-3">
+            <p class="muted">Execução é uma das principais métricas para indicar sua força de vontade ... Diga mais .... </p>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <button class="btn btn-default pagination">Próximo</button>
+        <button class="btn btn-default pagination">Anterior</button>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer_scripts %}
 <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?&sensor=true"></script>
-<script type="text/javascript">
-    var map,
-        local,
-        mapPositioned;
-
-/**
- * Pans the map to the center and opens an infowindow at the marker
- * position that refers to the latitude and longitude given to us by the
- * Geolocation API.
- */
-function showPositionOnMap(location) {
-    if (!mapPositioned) {
-        var maps_position = location;
-        var marker = new google.maps.Marker({
-            position: maps_position,
-            animation: google.maps.Animation.DROP,
-            map: map,
-            title: ':)'
-        });
-
-        map.panTo(maps_position);
-    }
-}
-
-
-/**
- * Custom options for the Map.
- * @type {google.maps.MapOptions}
- */
-var myOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(53.385873, -1.471471),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    panControl: false,
-    zoomControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    overviewMapControl: false,
-    styles: [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}]
-};
-
-
-/**
- * Initializes the canvas object with the map.
- * @see https://developers.google.com/maps/documentation/javascript/
- */
-function initialize(){
-    map = new google.maps.Map(document.getElementById('map'), myOptions);
-}
-
-</script>
-
+<script type="text/javascript" src="/assets/scripts/geo_data.js"></script>
+<script type="text/javascript" src="/assets/scripts/markercluster.js"></script>
+<script type="text/javascript" src="/assets/scripts/fire.js"></script>
 {% endblock %}

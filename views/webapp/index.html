@@ -3,94 +3,16 @@
 {% block title %}Home{% endblock %}
 
 {% block yield %}
-<section class="container login-wrapper">
-	<header class='text-center'><h1>Signup</h1></header>
-	<div class="row voffset5">
-		<div class="login-type-select col-lg-6 col-lg-offset-3">
-			<a class="btn btn-block btn-social btn-lg btn-facebook btn-login" id="login-facebook"><i class="fa fa-facebook"></i>Sign in with Facebook</a>
-			<a class="btn btn-block btn-social btn-lg btn-default btn-login" id="login-email"><i class="fa fa-envelope"></i>Login w/ email</a>
-		</div>
-		<div class="login-email-wrapper col-l6-10 col-lg-offset-1">
-			<form action="#" method="POST" class='form signup_form' role="form">
-				<input type="hidden" name="user[can_improve]">
-				
-				<section class="step step-1" id="signup_step_1">
-					<fieldset class="user-avatar form-group">
-						<input type="file" class='form-control' id="user_avatar" name="user[avatar]">
-					</fieldset>
-					<fieldset class="user-name form-group">
-						<input class='form-control' type="text" placeholder="Seu nome..." required name="user[name]" id="user_name">
-					</fieldset>
-					<fieldset class="user-country form-group">
-						<select name="user[country]" id="user_country" required class='form-control'>
-							<option value="">Selecione um pais...</option>
-							<option value="1">Brasil</option>
-							<option value="2">Estados Unidos</option>
-						</select>
-					</fieldset>
-					<fieldset class="user-city form-group">
-						<select name="user[city]" id="user_city" required class='form-control'>
-							<option value="">Selecione uma cidade</option>
-							<option value="1">São Paulo</option>
-							<option value="2">Rio de Janeiro</option>
-						</select>
-					</fieldset>
-					<fieldset class="user-question form-group">
-						<textarea name="user[question]" id="user_question" placeholder="Porque você quer jogar?" class='form-control'></textarea>	
-					</fieldset>
-				</section>
-				<section class="step step-2" id="signup_step_2">
-					<header class='main-header'><h2>Questionário</h2></header>
+<div id="home">
+	<section class="container login-wrapper">
 
-					<div class="user-questions">
-						<fieldset class="question-1 question-field from-group">
-							<label for="question_question_1" class='control-label'>Acredito na transformação do mundo de forma concreta</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-2 question-field from-group">
-							<label for="question_question_2" class='control-label'>Consigo equilibrar sonhos + emoções, vontades e ações</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						</fieldset>
-						<fieldset class="question-3 question-field from-group">
-							<label for="question_question_3" class='control-label'>Posso articular redes sociais e mobilizar pessoas para uma causa.</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-4 question-field from-group">
-							<label for="question_question_4" class='control-label'>Tenho capacidade de transformar sonhos em realidade</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-5 question-field from-group">
-							<label for="question_question_5" class='control-label'>Sou uma pessoa criativa</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-6 question-field from-group">
-							<label for="question_question_6" class='control-label'>Procurar inovar nas atitudes</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-7 question-field from-group">
-							<label for="question_question_7" class='control-label'>Tenho meus valores, crenças, mas estou aberto para o desconhecido</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-8 question-field from-group">
-							<label for="question_question_8" class='control-label'>Procuro me comunicar, mesmo não sabendo falar outras línguas</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-9 question-field from-group">
-							<label for="question_question_9" class='control-label'>Estou pronto para agir</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-						<fieldset class="question-10 question-field from-group">
-							<label for="question_question_10" class='control-label'>Quero compartilhar com os outros o que eu aprendi</label>
-							<input type="text" class='range-slider form-control' data-slider-min="1" data-slider-max="10" data-slider-step="1">
-						</fieldset>
-					</div>
-				</section>
-				<div class="form-controls">
-					<button class="data-step-button btn btn-lg btn-success" id="step_1_button" data-step='2' class='btn btn-lg btn-primary btn-block' disabled>Próximo >></button>
-				</div>
-			</form>
+		<header class='text-left' style='color:#ffffff;text-shadow:2px 2px 2px rgba(0,0,0,0.5)'><h1>Junto podemos <strong>mais</strong> :)</h1></header>
+		<div class="row voffset5">
+			<div class="login-type-select col-md-4 col-sm-8">
+				<a href="/profile/fidelis" class="btn btn-block btn-social btn-lg btn-facebook btn-login2" id="login-facebook"><i class="fa fa-facebook"></i>Cadastro com Facebook</a>
+				<a href='/signup' class="btn btn-block btn-social btn-lg btn-default btn-login2" id="login-email"><i class="fa fa-envelope"></i>Cadastro com email</a>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
 {% endblock %}
