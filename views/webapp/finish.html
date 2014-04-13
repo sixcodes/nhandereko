@@ -7,16 +7,22 @@
 {% endblock %}
 
 {% block yield %}
+
 <header class="top-header text-center">Obrigado!</header><br />
+<div class="missions-badge-bar">
+    <div class="container">
+        <p></p>
+    </div>
+</div>
 <section class="container finish">
 	<div class="page-header text-center">
-		<h1>Você finalizou todas as suas missões. <br /><small>Agora é só aguardar nosso contato</small></h1>
+		<h1>Você finalizou todas as suas missões. <br /><small>Agora é só aguardar nosso contato! Boa sorte.</small></h1>
 	</div>
 	
 	<article class="wrapper-99-jobs text-center">
 		<header><h3>Olha o que encontramos pra você!</h3></header>
 
-		<p>Enquanto você espera o nosso contato, encontramos empresas que tem tudo a ver com o seu perfil!</p>
+		<p>Enquanto você espera o nosso contato, encontramos empresas que tem tudo a ver com o seu perfil e estão com vagas abertas, que tal dar uma conferida?</p>
 
 		<ul class="list-unstyled inline-list text-center jobs-list">
 			<li class='job'>
@@ -40,6 +46,15 @@
 				</div>
 			</li>
 		</ul>
+		<div class="pull-right powered-by">Powered by <a href="https://www.99jobs.com/" target="_blank"><img src="/assets/images/99jobs.png" alt="Powered by 99jobs"></a></div>
 	</article>
 </section>
+{% endblock %}
+
+{% block footer_scripts %} 
+<script>
+	var verifiedIcon = '<i class="fa fa-check"></i>';
+
+	showBadgeBar(verifiedIcon + ' Parabéns! Você concluiu todas as missões!!');
+</script>
 {% endblock %}

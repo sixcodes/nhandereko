@@ -8,6 +8,13 @@
 
 {% block yield %}
 <header class="top-header text-center">Suas missões</header><br />
+
+<div class="missions-badge-bar">
+    <div class="container">
+        <p></p>
+    </div>
+</div>
+
 <div class="container">
     <div class="row missions-list-square">
         <div class="col-sm-6 col-md-3 mission {% if !completed || completed == 1 %} current {% endif %}">
@@ -16,7 +23,7 @@
                 <div class="caption">
                     <h3>Prova da água</h3>
                     <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p align="center" class='mg-10'><a href="/mission/water" class="btn btn-primary" role="button">Começar</a> <a href="#" data-toggle="modal" data-target="js_modal_status" class="btn btn-default js_modal_status" role="button">Status</a></p>
+                    <p align="center" class='mg-10'><a href="/mission/water" class="btn btn-primary" role="button">Começar</a> <a href="#" data-toggle="modal" data-target="js_modal_status" class="btn btn-default btn-status" role="button">Status</a></p>
                 </div>
                     <div class="progress">
                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: {% if completed > 1 %} 100% {% else %} 10% {% endif %}">
@@ -32,7 +39,7 @@
                 <div class="caption">
                     <h3>Prova do ar</h3>
                     <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p align="center" class='mg-10'><a href="/mission/air" class="btn btn-primary" role="button">Começar</a> <a href="#" class="btn btn-default" role="button">Status</a></p>
+                    <p align="center" class='mg-10'><a href="/mission/air" class="btn btn-primary" role="button">Começar</a> <a href="#" class="btn btn-default btn-status" role="button">Status</a></p>
                 </div>
                 {% if completed %}
                     <div class="progress">
@@ -101,5 +108,39 @@
             </div>
         </div>
     </div>
-</div>
+<div>
+{% endblock %}
+
+{% block footer_scripts %}
+<script type="application/javascript">
+
+$(function () {
+    var queryString = getQueryString();
+
+    if (queryString) {
+        var level = queryString.split('=')[1];
+        var verifiedIcon = '<i class="fa fa-check"></i>';
+
+        switch (level) {
+            case '2':
+            showBadgeBar(verifiedIcon + ' Parabéns! Você completou a missão Prova Dágua! Continue em frente!');
+            break;
+
+            case '3':
+            showBadgeBar(verifiedIcon + ' Parabéns! A prova do Ar foi completada com sucesso! Vamos em frente!');
+            break;
+
+            case '4':
+            showBadgeBar(verifiedIcon + ' A prova da Terra foi completa! Já é quase um guerreiro! ');
+            break;
+
+            case '5':
+            showBadgeBar(verifiedIcon + ' A prova de fogo foi completa com sucesso! Falta pouco pra se tornar um guerreiro! ');
+            break;
+        }
+    }
+
+});
+
+</script>
 {% endblock %}

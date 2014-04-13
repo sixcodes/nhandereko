@@ -16,7 +16,7 @@ var nhanderekoApp;
 			function validForm(form) {
 				var allValid = [];
 
-				if(currentStep > 1)  { 
+				if(currentStep > 1)  {
 					return true ;
 				}
 
@@ -45,7 +45,7 @@ var nhanderekoApp;
 					comment.val('');
 					comment_template.fadeIn('slow');
 
-					setTimeout(function() { document.location = '/missions/?completed=4'; }, 1000);
+					setTimeout(function() { document.location = '/missions/?completed=3'; }, 1000);
 				}
 			})
 
@@ -84,7 +84,7 @@ var nhanderekoApp;
 					target = $('.step-' + step),
 					self_target = $('.step-' + currentStep);
 
-				canContinue = validForm(form);	
+				canContinue = validForm(form);
 
 				if(!canContinue) { return false; }
 
@@ -99,7 +99,7 @@ var nhanderekoApp;
 				t.attr('data-step', currentStep + 1);
 
 				console.log(currentStep);
-				
+
 				if(currentStep == 3) {
 					$(".step-3 .questions-step").append($('.step-2 .user-questions')).find(".question-field").on('click', function(ev) {
 						var can_select = $(".question-field.selected").size() >= 3
@@ -131,6 +131,25 @@ var nhanderekoApp;
 
 		}
 	}
-
 	nhanderekoApp.init();
+
+
 })()
+
+
+function getQueryString () {
+    return location.search
+        ? location.search.slice(1)
+        : '';
+}
+
+function showBadgeBar (message) {
+    var $badgeBar = $('.missions-badge-bar');
+
+    $badgeBar.slideDown()
+    $('p', $badgeBar).html(message);
+
+    setTimeout(function () {
+        $badgeBar.slideUp();
+    }, 5000);
+}
