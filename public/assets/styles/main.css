@@ -276,7 +276,21 @@ header.top-header {
 }
 .missions-list-square .mission .thumbnail {
 	padding:10px;
-	height:330px;
+	height:400px;
+	position: relative;
+}
+
+.missions-list-square .mission .inner {
+	height: 130px;
+}
+
+.missions-list-square .mission .progress {
+	margin-top: 10px;
+	position: absolute;
+	bottom: 10px;
+	height: 20px;
+	width: 75%;
+	margin-left: 9%;
 }
 
 .mg-10 {
