@@ -16,7 +16,7 @@
     "bcrypt": "0.7.7",
     "passport": "0.1.*",
     "passport-local": "0.1.*",
-    "mongoose": "3.8.*",
+    "mongoose": "5.7.*",
     "mandrill-api": "1.0.*",
     "consolidate": "0.10.0",
     "swig": "1.3.*",
